@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Scientific Calculator</title>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="calculator">
+  <h2>⚡ SCIENTIFIC · PRO</h2>
+  <input type="text" id="display" value="0" readonly>
+
+  <div class="mode-bar">
+    <span>📐 <span id="modeLabel">DEG</span></span>
+    <button onclick="toggleMode()" id="modeBtn">DEG/RAD</button>
+    <span>MEM <span id="memIndicator" class="mem-indicator">▪</span></span>
+    <button class="mem" onclick="memStore()">M+</button>
+    <button class="mem" onclick="memRecall()">MR</button>
+    <button class="mem" onclick="memClear()">MC</button>
+    <button class="mem" onclick="memAdd()">M+</button>
+  </div>
+
+  <div class="buttons">
+    <!-- Row 1: Hyperbolics -->
+    <button class="fn" onclick="scientific('sin')">sin</button>
+    <button class="fn" onclick="scientific('cos')">cos</button>
+    <button class="fn" onclick="scientific('tan')">tan</button>
+    <button class="fn" onclick="scientific('sinh')">sinh</button>
+    <button class="fn" onclick="scientific('cosh')">cosh</button>
+    <button class="fn" onclick="scientific('tanh')">tanh</button>
+
+    <!-- Row 2: log, ln, sqrt, x², xʸ, 1/x -->
+    <button class="fn" onclick="scientific('log')">log</button>
+    <button class="fn" onclick="scientific('ln')">ln</button>
+    <button class="fn" onclick="scientific('sqrt')">√</button>
+    <button class="fn" onclick="scientific('square')">x²</button>
+    <button class="fn" onclick="insert('**')">xʸ</button>
+    <button class="fn" onclick="scientific('inv')">1/x</button>
+
+    <!-- Row 3: n!, nCr, nPr, π, e, % -->
+    <button class="fn" onclick="scientific('factorial')">n!</button>
+    <button class="fn" onclick="scientific('nCr')">nCr</button>
+    <button class="fn" onclick="scientific('nPr')">nPr</button>
+    <button class="fn" onclick="insert('Math.PI')">π</button>
+    <button class="fn" onclick="insert('Math.E')">e</button>
+    <button class="fn" onclick="insert('%')">%</button>
+
+    <!-- Row 4: mod, (, ), AC, DEL, C -->
+    <button class="fn" onclick="insert(' % ')" style="font-size:0.7rem;">mod</button>
+    <button onclick="insert('(')">(</button>
+    <button onclick="insert(')')">)</button>
+    <button class="clr" onclick="clearDisplay()">AC</button>
+    <button onclick="deleteLast()">DEL</button>
+    <button class="clr" onclick="clearDisplay()" style="background:#585e72;">C</button>
+
+    <!-- Row 5: 7 8 9 ÷ × + -->
+    <button onclick="insert('7')">7</button>
+    <button onclick="insert('8')">8</button>
+    <button onclick="insert('9')">9</button>
+    <button class="op" onclick="insert('/')">÷</button>
+    <button class="op" onclick="insert('*')">×</button>
+    <button class="op" onclick="insert('+')">+</button>
+
+    <!-- Row 6: 4 5 6 - . = -->
+    <button onclick="insert('4')">4</button>
+    <button onclick="insert('5')">5</button>
+    <button onclick="insert('6')">6</button>
+    <button class="op" onclick="insert('-')">−</button>
+    <button onclick="insert('.')">.</button>
+    <button class="eq" onclick="calculate()">=</button>
+
+    <!-- Row 7: 1 2 3 0 (span) EXP ANS -->
+    <button onclick="insert('1')">1</button>
+    <button onclick="insert('2')">2</button>
+    <button onclick="insert('3')">3</button>
+    <button class="zero" onclick="insert('0')">0</button>
+    <button class="fn" onclick="insert('Math.E')" style="font-size:0.7rem;">EXP</button>
+    <button class="fn" onclick="insert('ANS')" style="font-size:0.7rem;">ANS</button>
+
+    <!-- Row 8: stats, complex, matrix, derivative, integral, fraction -->
+    <button class="stat" onclick="statsMean()">x̄</button>
+    <button class="stat" onclick="statsSum()">Σ</button>
+    <button class="stat" onclick="statsVar()">σ²</button>
+    <button class="fn" onclick="complexOp()">i</button>
+    <button class="fn" onclick="matrixOp()">[M]</button>
+    <button class="fn" onclick="derivativeOp()">d/dx</button>
+    <button class="fn" onclick="integralOp()">∫</button>
+    <button class="fn" onclick="fractionOp()">a/b</button>
+  </div>
+
+  <div style="display:flex; justify-content:space-between; margin-top:10px; color:#6a748b; font-size:0.6rem; padding:0 4px;">
+    <span>⌨️ Enter=calc · Esc=AC · Back=del</span>
+    <span>v2.0</span>
+  </div>
+</div>
+
+<!-- External JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>

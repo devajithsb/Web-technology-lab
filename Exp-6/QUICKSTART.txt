@@ -1,0 +1,269 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║         QUICK START GUIDE - Computer Science Department Website             ║
+║                                                                              ║
+║  This is a complete, production-ready department webpage with:              ║
+║  ✓ Home, Login, Registration, Logout, About pages                          ║
+║  ✓ User authentication and session management                              ║
+║  ✓ MySQL database integration                                              ║
+║  ✓ Form validation (client & server-side)                                  ║
+║  ✓ Responsive design (mobile, tablet, desktop)                             ║
+║  ✓ Security best practices                                                 ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ STEP 1: START XAMPP SERVER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Open XAMPP Control Panel
+2. Click "Start" button next to Apache
+3. Click "Start" button next to MySQL
+4. Wait for both to show "Running" status (green)
+
+Note: Default Apache runs on port 80, MySQL on port 3306
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ STEP 2: CREATE DATABASE & TABLES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+METHOD A: Using phpMyAdmin (Recommended for beginners)
+─────────────────────────────────────────────────────
+1. Open browser and go to: http://localhost/phpmyadmin
+2. Look for the "SQL" tab at the top of the page
+3. Open the file: C:\xampp\htdocs\program-6\database_setup.sql
+4. Copy ALL the SQL code (Ctrl+A, then Ctrl+C)
+5. Paste it into the phpMyAdmin SQL editor (Ctrl+V)
+6. Click the "Go" or "Execute" button (usually red/orange)
+7. You should see success messages
+
+METHOD B: Using Command Line
+─────────────────────────────
+1. Open Command Prompt
+2. Navigate to: cd C:\xampp\mysql\bin
+3. Run: mysql -u root -p
+4. When prompted for password, just press Enter (default is blank)
+5. Execute: source C:\xampp\htdocs\program-6\database_setup.sql;
+6. Type: exit to close MySQL
+
+METHOD C: Using MySQL Workbench (If installed)
+──────────────────────────────────────────────
+1. Open MySQL Workbench
+2. Connect to localhost server
+3. File → Open SQL Script
+4. Select: database_setup.sql
+5. Click "Execute" (⚡ icon)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ STEP 3: ACCESS THE APPLICATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Open your web browser (Chrome, Firefox, Edge, Safari)
+2. Go to: http://localhost/program-6/
+3. You should see the home page with navigation menu
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ STEP 4: TEST THE APPLICATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Test Login with Pre-loaded Credentials:
+────────────────────────────────────────
+
+  🔑 USERNAME: admin
+     PASSWORD: admin123
+
+     OR
+
+  🔑 USERNAME: student1
+     PASSWORD: pass1234
+
+     OR
+
+  🔑 USERNAME: student2
+     PASSWORD: pass1234
+
+Steps:
+1. Click "Login" in the navigation bar
+2. Enter username and password (from above)
+3. Click "Login" button
+4. You should be redirected to home page
+5. Notice your username appears in the navbar as "Logout (username)"
+6. Click "Logout" to end your session
+
+Test Registration with New Account:
+────────────────────────────────────
+1. Click "Registration" in the navigation bar
+2. Fill in the form:
+   - Full Name: Your Name
+   - Email: yourname@example.com
+   - Username: yourname
+   - Password: pass123
+   - Confirm Password: pass123
+3. Click "Register" button
+4. You should see a success message
+5. Go to Login page and login with your new account
+
+Test Other Pages:
+─────────────────
+1. Click "Home" - View homepage with features
+2. Click "About Us" - View department information, programs, facilities
+3. After login, click your username (Logout button) - Tests session logout
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ FILE DESCRIPTIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📄 index.php          → Home page (welcome page with features)
+📄 login.php          → User login page
+📄 register.php       → User registration form
+📄 about.php          → About department page
+📄 logout.php         → Logout functionality (destroys session)
+📄 db.php             → Database connection configuration
+
+🎨 style.css          → Complete styling (responsive, modern design)
+⚙️  script.js          → JavaScript validations and functions
+
+🗄️  database_setup.sql → Database creation script (run this in phpMyAdmin)
+📖 README.md          → Detailed documentation
+📋 QUICKSTART.txt     → This file
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ PAGE NAVIGATION STRUCTURE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+                    ┌─── Home (index.php)
+                    │
+                    ├─── About Us (about.php)
+    Navigation Bar ─┤
+                    ├─── Login (login.php) ─┐
+                    │                        ├─ After Login ─→ Shows Logout Button
+                    └─── Registration ──────┘
+                         (register.php)
+
+Default Links shown: Home | About Us | Login | Registration
+After Login shows:   Home | About Us | Logout (username)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ FEATURES OVERVIEW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ HOMEPAGE
+   - Welcome message
+   - Feature highlights
+   - Shows different content for logged-in users
+   - Interactive "Learn More" button
+   - Professional design with gradients
+
+✅ REGISTRATION
+   - Full Name, Email, Username, Password fields
+   - Client-side validation (JavaScript)
+   - Server-side validation (PHP)
+   - Prevents duplicate usernames
+   - Email format validation
+   - Password confirmation
+   - Success/error messages
+
+✅ LOGIN
+   - Username and password authentication
+   - Session management
+   - Shows username in navbar after login
+   - Secure prepared statements (prevents SQL injection)
+   - Clear error messages
+
+✅ ABOUT US
+   - Department mission and vision
+   - Academic programs description
+   - Department information table
+   - Facilities and resources list
+   - Contact information
+
+✅ SECURITY
+   - Prepared statements for SQL safety
+   - Input validation and sanitization
+   - Session-based authentication
+   - HTMLspecialchars() for XSS prevention
+   - UNIQUE constraints on email/username
+
+✅ RESPONSIVE DESIGN
+   - Mobile phones (< 480px)
+   - Tablets (480px - 768px)
+   - Desktop (> 768px)
+   - Fluid layouts and images
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ "Connection failed: Access denied"
+✓ Solution: Ensure MySQL is running, check db.php has correct credentials
+
+❌ "Table doesn't exist"
+✓ Solution: Run the database_setup.sql script in phpMyAdmin
+
+❌ "Login button doesn't work"
+✓ Solution: Clear browser cache (Ctrl+F5), check console for errors (F12)
+
+❌ "Page doesn't load"
+✓ Solution: 
+  - Check Apache is running (green in XAMPP)
+  - Try: http://localhost/program-6/index.php
+  - Check file permissions
+
+❌ "Styling looks broken"
+✓ Solution: Clear cache (Ctrl+F5), check if style.css exists in folder
+
+❌ "Database setup script not working"
+✓ Solution:
+  - Check MySQL is running
+  - Verify you're pasting ALL code from database_setup.sql
+  - Try line by line in phpMyAdmin
+  - Check for error messages in red text
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ IMPORTANT NOTES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+• Default MySQL root password is BLANK (no password)
+• Database name: department_db
+• Default username for database: root
+• The application is at: C:\xampp\htdocs\program-6\
+• Accessible from browser at: http://localhost/program-6/
+• phpMyAdmin is at: http://localhost/phpmyadmin
+
+SECURITY NOTES FOR PRODUCTION:
+- Change default passwords
+- Use password_hash() for password storage
+- Add CSRF tokens
+- Enable HTTPS
+- Use environment variables for sensitive data
+- Implement rate limiting
+- Add email verification
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ NEXT STEPS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. ✓ Start XAMPP (Apache & MySQL)
+2. ✓ Create database (run database_setup.sql in phpMyAdmin)
+3. ✓ Access application (http://localhost/program-6/)
+4. ✓ Test login with provided credentials
+5. ✓ Test registration to create new account
+6. ✓ Explore all pages
+7. ✓ Read README.md for detailed documentation
+8. ✓ Customize as needed (colors, text, functionality)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ NEED HELP?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📖 Full documentation: Check README.md
+🔍 Debug errors: Open browser console (F12 → Console tab)
+🗄️  View database: Open phpMyAdmin (http://localhost/phpmyadmin)
+📝 Check PHP errors: Look at Apache error log in XAMPP
+💻 Test database connection: Open db.php in browser
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+READY TO START? 🚀
+
+Go to: http://localhost/program-6/
+
+Happy coding! 💻

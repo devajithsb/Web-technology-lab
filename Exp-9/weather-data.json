@@ -1,0 +1,246 @@
+{
+  "source": "Hypothetical Weather Desk API",
+  "locations": [
+    {
+      "city": "Toronto",
+      "country": "Canada",
+      "current": {
+        "condition": "Partly cloudy",
+        "icon": "☀",
+        "temperature": 18,
+        "feelsLike": 17,
+        "humidity": 62,
+        "windSpeed": 14,
+        "rainfall": 0.2,
+        "updatedAt": "10:42 AM"
+      },
+      "forecast": [
+        { "day": "Today", "condition": "Partly cloudy", "icon": "⛅", "high": 19, "low": 12 },
+        { "day": "Tue", "condition": "Clear", "icon": "☀", "high": 21, "low": 13 },
+        { "day": "Wed", "condition": "Showers", "icon": "☂", "high": 16, "low": 11 },
+        { "day": "Thu", "condition": "Cloudy", "icon": "☁", "high": 17, "low": 10 },
+        { "day": "Fri", "condition": "Mostly sunny", "icon": "☼", "high": 22, "low": 14 }
+      ]
+    },
+
+    {
+      "city": "Lisbon",
+      "country": "Portugal",
+      "current": {
+        "condition": "Sunny and mild",
+        "icon": "☀",
+        "temperature": 24,
+        "feelsLike": 25,
+        "humidity": 48,
+        "windSpeed": 11,
+        "rainfall": 0,
+        "updatedAt": "10:42 AM"
+      },
+      "forecast": [
+        { "day": "Today", "condition": "Sunny", "icon": "☀", "high": 25, "low": 18 },
+        { "day": "Tue", "condition": "Clear", "icon": "☼", "high": 26, "low": 18 },
+        { "day": "Wed", "condition": "Breezy", "icon": "↝", "high": 23, "low": 17 },
+        { "day": "Thu", "condition": "Sunny", "icon": "☀", "high": 24, "low": 17 },
+        { "day": "Fri", "condition": "Partly cloudy", "icon": "⛅", "high": 22, "low": 16 }
+      ]
+    },
+
+    {
+      "city": "Tokyo",
+      "country": "Japan",
+      "current": {
+        "condition": "Light rain",
+        "icon": "☂",
+        "temperature": 21,
+        "feelsLike": 22,
+        "humidity": 79,
+        "windSpeed": 9,
+        "rainfall": 2.4,
+        "updatedAt": "10:42 AM"
+      },
+      "forecast": [
+        { "day": "Today", "condition": "Light rain", "icon": "☂", "high": 23, "low": 18 },
+        { "day": "Tue", "condition": "Cloudy", "icon": "☁", "high": 24, "low": 19 },
+        { "day": "Wed", "condition": "Showers", "icon": "☂", "high": 22, "low": 18 },
+        { "day": "Thu", "condition": "Partly cloudy", "icon": "⛅", "high": 25, "low": 19 },
+        { "day": "Fri", "condition": "Clear", "icon": "☀", "high": 26, "low": 20 }
+      ]
+    },
+
+    {
+      "city": "Nairobi",
+      "country": "Kenya",
+      "current": {
+        "condition": "Warm with sunshine",
+        "icon": "☀",
+        "temperature": 26,
+        "feelsLike": 27,
+        "humidity": 41,
+        "windSpeed": 17,
+        "rainfall": 0,
+        "updatedAt": "10:42 AM"
+      },
+      "forecast": [
+        { "day": "Today", "condition": "Sunny", "icon": "☀", "high": 27, "low": 16 },
+        { "day": "Tue", "condition": "Clear", "icon": "☼", "high": 28, "low": 16 },
+        { "day": "Wed", "condition": "Breezy", "icon": "↝", "high": 26, "low": 15 },
+        { "day": "Thu", "condition": "Partly cloudy", "icon": "⛅", "high": 25, "low": 16 },
+        { "day": "Fri", "condition": "Sunny", "icon": "☀", "high": 27, "low": 17 }
+      ]
+    },
+
+    {
+      "city": "Mumbai",
+      "country": "India",
+      "current": {
+        "condition": "Partly cloudy",
+        "icon": "⛅",
+        "temperature": 29,
+        "feelsLike": 32,
+        "humidity": 76,
+        "windSpeed": 15,
+        "rainfall": 1.2,
+        "updatedAt": "10:42 AM"
+      },
+      "forecast": [
+        { "day": "Today", "condition": "Partly cloudy", "icon": "⛅", "high": 31, "low": 25 },
+        { "day": "Tue", "condition": "Mostly sunny", "icon": "☀", "high": 32, "low": 25 },
+        { "day": "Wed", "condition": "Scattered showers", "icon": "☂", "high": 30, "low": 25 },
+        { "day": "Thu", "condition": "Cloudy", "icon": "☁", "high": 29, "low": 24 },
+        { "day": "Fri", "condition": "Sunny", "icon": "☀", "high": 31, "low": 25 }
+      ]
+    },
+
+    {
+      "city": "Delhi",
+      "country": "India",
+      "current": {
+        "condition": "Clear and warm",
+        "icon": "☀",
+        "temperature": 27,
+        "feelsLike": 28,
+        "humidity": 52,
+        "windSpeed": 10,
+        "rainfall": 0,
+        "updatedAt": "10:42 AM"
+      },
+      "forecast": [
+        { "day": "Today", "condition": "Clear", "icon": "☀", "high": 31, "low": 20 },
+        { "day": "Tue", "condition": "Sunny", "icon": "☀", "high": 32, "low": 20 },
+        { "day": "Wed", "condition": "Partly cloudy", "icon": "⛅", "high": 30, "low": 19 },
+        { "day": "Thu", "condition": "Clear", "icon": "☼", "high": 31, "low": 20 },
+        { "day": "Fri", "condition": "Mostly sunny", "icon": "☀", "high": 32, "low": 21 }
+      ]
+    },
+
+    {
+      "city": "Bengaluru",
+      "country": "India",
+      "current": {
+        "condition": "Cloudy",
+        "icon": "☁",
+        "temperature": 23,
+        "feelsLike": 23,
+        "humidity": 68,
+        "windSpeed": 12,
+        "rainfall": 0.8,
+        "updatedAt": "10:42 AM"
+      },
+      "forecast": [
+        { "day": "Today", "condition": "Cloudy", "icon": "☁", "high": 26, "low": 19 },
+        { "day": "Tue", "condition": "Partly cloudy", "icon": "⛅", "high": 27, "low": 19 },
+        { "day": "Wed", "condition": "Light showers", "icon": "☂", "high": 25, "low": 19 },
+        { "day": "Thu", "condition": "Cloudy", "icon": "☁", "high": 26, "low": 18 },
+        { "day": "Fri", "condition": "Sunny", "icon": "☀", "high": 27, "low": 18 }
+      ]
+    },
+
+    {
+      "city": "Kochi",
+      "country": "India",
+      "current": {
+        "condition": "Light rain",
+        "icon": "☂",
+        "temperature": 27,
+        "feelsLike": 31,
+        "humidity": 84,
+        "windSpeed": 13,
+        "rainfall": 3.1,
+        "updatedAt": "10:42 AM"
+      },
+      "forecast": [
+        { "day": "Today", "condition": "Light rain", "icon": "☂", "high": 29, "low": 24 },
+        { "day": "Tue", "condition": "Showers", "icon": "☂", "high": 29, "low": 24 },
+        { "day": "Wed", "condition": "Thunderstorms", "icon": "⛈", "high": 28, "low": 24 },
+        { "day": "Thu", "condition": "Cloudy", "icon": "☁", "high": 29, "low": 24 },
+        { "day": "Fri", "condition": "Scattered showers", "icon": "☂", "high": 30, "low": 24 }
+      ]
+    },
+
+    {
+      "city": "Chennai",
+      "country": "India",
+      "current": {
+        "condition": "Hot and partly cloudy",
+        "icon": "⛅",
+        "temperature": 31,
+        "feelsLike": 35,
+        "humidity": 69,
+        "windSpeed": 16,
+        "rainfall": 0.4,
+        "updatedAt": "10:42 AM"
+      },
+      "forecast": [
+        { "day": "Today", "condition": "Partly cloudy", "icon": "⛅", "high": 33, "low": 26 },
+        { "day": "Tue", "condition": "Sunny", "icon": "☀", "high": 34, "low": 26 },
+        { "day": "Wed", "condition": "Cloudy", "icon": "☁", "high": 32, "low": 26 },
+        { "day": "Thu", "condition": "Scattered showers", "icon": "☂", "high": 31, "low": 25 },
+        { "day": "Fri", "condition": "Partly cloudy", "icon": "⛅", "high": 32, "low": 26 }
+      ]
+    },
+
+    {
+      "city": "Hyderabad",
+      "country": "India",
+      "current": {
+        "condition": "Mostly sunny",
+        "icon": "☀",
+        "temperature": 28,
+        "feelsLike": 29,
+        "humidity": 55,
+        "windSpeed": 13,
+        "rainfall": 0,
+        "updatedAt": "10:42 AM"
+      },
+      "forecast": [
+        { "day": "Today", "condition": "Sunny", "icon": "☀", "high": 31, "low": 21 },
+        { "day": "Tue", "condition": "Clear", "icon": "☼", "high": 32, "low": 21 },
+        { "day": "Wed", "condition": "Partly cloudy", "icon": "⛅", "high": 30, "low": 20 },
+        { "day": "Thu", "condition": "Cloudy", "icon": "☁", "high": 29, "low": 21 },
+        { "day": "Fri", "condition": "Mostly sunny", "icon": "☀", "high": 31, "low": 21 }
+      ]
+    },
+
+    {
+      "city": "Pune",
+      "country": "India",
+      "current": {
+        "condition": "Pleasant and partly cloudy",
+        "icon": "⛅",
+        "temperature": 25,
+        "feelsLike": 25,
+        "humidity": 58,
+        "windSpeed": 11,
+        "rainfall": 0.1,
+        "updatedAt": "10:42 AM"
+      },
+      "forecast": [
+        { "day": "Today", "condition": "Partly cloudy", "icon": "⛅", "high": 28, "low": 19 },
+        { "day": "Tue", "condition": "Sunny", "icon": "☀", "high": 29, "low": 19 },
+        { "day": "Wed", "condition": "Cloudy", "icon": "☁", "high": 27, "low": 18 },
+        { "day": "Thu", "condition": "Light showers", "icon": "☂", "high": 26, "low": 18 },
+        { "day": "Fri", "condition": "Mostly sunny", "icon": "☀", "high": 28, "low": 19 }
+      ]
+    }
+  ]
+}

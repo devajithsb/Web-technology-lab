@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#edf4ed">
+
+  <title>Weather Desk | City Forecasts</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="weather-app">
+
+    <!-- Top Bar -->
+    <header class="topbar">
+
+      <a class="wordmark" href="#" aria-label="Weather Desk home">
+        <span class="wordmark-icon" aria-hidden="true">◒</span>
+        weather<span>desk</span>
+      </a>
+
+      <div class="feed-status">
+        <span class="status-dot ready" aria-hidden="true"></span>
+        <span id="feed-status">WEATHER DATA</span>
+      </div>
+
+      <div class="unit-switch" role="group" aria-label="Temperature units">
+
+        <button
+          class="unit-button active"
+          type="button"
+          data-unit="C"
+          aria-pressed="true">
+          °C
+        </button>
+
+        <button
+          class="unit-button"
+          type="button"
+          data-unit="F"
+          aria-pressed="false">
+          °F
+        </button>
+
+      </div>
+
+    </header>
+
+
+    <!-- Search Section -->
+    <section class="search-row" aria-label="Choose a location">
+
+      <div class="date-block">
+
+        <span class="eyebrow">
+          YOUR LOCAL FORECAST
+        </span>
+
+        <time id="today-date"></time>
+
+      </div>
+
+
+      <form id="search-form" class="search-form" role="search">
+
+        <label class="sr-only" for="city-input">
+          City
+        </label>
+
+        <span class="search-icon" aria-hidden="true">
+          ⌕
+        </span>
+
+        <input
+          id="city-input"
+          list="city-options"
+          type="search"
+          value="Toronto"
+          placeholder="Search a city..."
+          autocomplete="off"
+          aria-label="Search cities"
+          required
+        >
+
+        <datalist id="city-options"></datalist>
+
+        <button type="submit" aria-label="Search weather">
+          Search
+          <span aria-hidden="true">↗</span>
+        </button>
+
+      </form>
+
+    </section>
+
+
+    <!-- Error / Notice -->
+    <div
+      id="notice"
+      class="notice"
+      role="status"
+      aria-live="polite"
+      hidden>
+    </div>
+
+
+    <!-- Weather Content -->
+    <section
+      id="weather-content"
+      class="weather-content"
+      aria-live="polite"
+      aria-busy="true"
+      aria-label="Weather forecast">
+
+
+      <!-- Location -->
+      <div class="location-heading">
+
+        <div>
+
+          <span class="eyebrow">
+            CURRENT CONDITIONS
+          </span>
+
+          <h1 id="location-name">
+            Loading forecast
+            <span class="location-pin" aria-hidden="true">
+              ···
+            </span>
+          </h1>
+
+        </div>
+
+        <p id="condition-summary" class="condition-summary">
+          Loading weather data
+        </p>
+
+      </div>
+
+
+      <!-- Current Weather -->
+      <section class="current-weather" aria-label="Current weather">
+
+        <div class="temperature-block">
+
+          <span
+            id="weather-icon"
+            class="weather-icon"
+            aria-hidden="true">
+            ◌
+          </span>
+
+          <p class="temperature">
+
+            <span id="current-temperature">
+              --
+            </span>
+
+            <span
+              class="degree"
+              id="current-degree">
+              °C
+            </span>
+
+          </p>
+
+          <p id="feels-like" class="feels-like">
+            Feels like --°
+          </p>
+
+        </div>
+
+
+        <!-- Weather Facts -->
+        <div class="weather-facts">
+
+          <div class="fact">
+
+            <span class="fact-icon" aria-hidden="true">
+              ◉
+            </span>
+
+            <span class="fact-label">
+              HUMIDITY
+            </span>
+
+            <strong id="humidity">
+              --%
+            </strong>
+
+          </div>
+
+
+          <div class="fact">
+
+            <span
+              class="fact-icon wind-icon"
+              aria-hidden="true">
+              ↝
+            </span>
+
+            <span class="fact-label">
+              WIND
+            </span>
+
+            <strong id="wind-speed">
+              -- km/h
+            </strong>
+
+          </div>
+
+
+          <div class="fact">
+
+            <span
+              class="fact-icon rain-icon"
+              aria-hidden="true">
+              ⌁
+            </span>
+
+            <span class="fact-label">
+              RAINFALL
+            </span>
+
+            <strong id="rainfall">
+              -- mm
+            </strong>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- Forecast -->
+      <section
+        class="forecast-section"
+        aria-labelledby="forecast-title">
+
+        <div class="section-heading">
+
+          <div>
+
+            <span class="eyebrow">
+              PLAN AHEAD
+            </span>
+
+            <h2 id="forecast-title">
+              5-day forecast
+            </h2>
+
+          </div>
+
+          <span class="forecast-caption">
+            DAILY OUTLOOK
+          </span>
+
+        </div>
+
+
+        <div
+          id="forecast-list"
+          class="forecast-list">
+        </div>
+
+      </section>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="page-footer">
+
+      <span>
+        WEATHER DESK
+      </span>
+
+      <span>
+        AJAX + JSON
+      </span>
+
+      <span>
+        WEATHER DATA
+      </span>
+
+    </footer>
+
+  </main>
+
+
+  <!-- jQuery Library -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>

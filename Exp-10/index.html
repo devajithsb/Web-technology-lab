@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f8f1">
+  <title>Book Shelf | Discover Books</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <main class="library">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Book Shelf home">
+        <span class="brand-icon" aria-hidden="true">▤</span>
+        <span>book<span class="brand-accent">shelf</span></span>
+      </a>
+      <span class="topbar-label">JQUERY AJAX DEMO</span>
+    </header>
+
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">A LITTLE INSPIRATION</p>
+      <h1 id="page-title">Find your next read.</h1>
+      <p class="intro-copy">Search the collection and explore book titles and authors.</p>
+      <form id="book-search" class="search-form" role="search">
+        <label class="sr-only" for="search-input">Search books</label>
+        <input id="search-input" type="search" value="fiction" placeholder="Search by title or author..." autocomplete="off">
+        <button id="load-books" type="submit"><span aria-hidden="true">⌕</span> Load Books</button>
+      </form>
+    </section>
+
+    <section class="collection" aria-labelledby="collection-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">YOUR COLLECTION</p>
+          <h2 id="collection-title">Books</h2>
+        </div>
+        <span id="book-count" class="book-count"></span>
+      </div>
+      <p id="message" class="message" role="status" aria-live="polite">Enter a title or author, then select “Load Books”.</p>
+      <ul id="book-list" aria-busy="false"></ul>
+    </section>
+
+    <footer class="footer">
+      <span>BOOK SHELF</span>
+      <span>BOOK DATA FROM <a href="books.json">LOCAL JSON</a></span>
+      <span>MADE FOR READERS</span>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

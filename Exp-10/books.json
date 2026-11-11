@@ -1,0 +1,8 @@
+[
+  { "title": "Pride and Prejudice", "author": "Jane Austen", "genre": "Fiction · Romance", "year": 1813 },
+  { "title": "Frankenstein", "author": "Mary Shelley", "genre": "Fiction · Gothic", "year": 1818 },
+  { "title": "The Adventures of Sherlock Holmes", "author": "Arthur Conan Doyle", "genre": "Fiction · Mystery", "year": 1892 },
+  { "title": "Alice's Adventures in Wonderland", "author": "Lewis Carroll", "genre": "Fiction · Fantasy", "year": 1865 },
+  { "title": "The Time Machine", "author": "H. G. Wells", "genre": "Fiction · Science fiction", "year": 1895 },
+  { "title": "Little Women", "author": "Louisa May Alcott", "genre": "Fiction · Coming of age", "year": 1868 }
+]
